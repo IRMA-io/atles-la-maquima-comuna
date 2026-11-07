@@ -1,21 +1,68 @@
-MIT License
-
+Atles · La màquina comuna
 Copyright (c) 2026 sistema-io
+https://github.com/IRMA-io/atles-eines-collectives
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Current licensing policy — effective 2026-11-07
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. SOFTWARE
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The original software in this distribution is offered under the
+PolyForm Noncommercial License 1.0.0:
+https://polyformproject.org/licenses/noncommercial/1.0.0
+
+The license text at that versioned URL is incorporated by reference.
+Use, modification and distribution are subject to its full terms,
+including its definitions of permitted purposes and its notices requirement.
+
+Required Notice: Copyright (c) 2026 sistema-io.
+Required Notice: Atles · La màquina comuna — sistema-io (GitHub: IRMA-io).
+Required Notice: Source: https://github.com/IRMA-io/atles-eines-collectives
+
+2. ORIGINAL CONTENT
+
+Original prose, diagrams, illustrations and methodological materials
+provided by the rights holder in this distribution, to the extent
+protected by copyright or applicable database rights, are offered under
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+Full legal terms:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en
+
+Attribution designation: sistema-io (GitHub: IRMA-io).
+Work: Atles · La màquina comuna.
+Source: https://github.com/IRMA-io/atles-eines-collectives
+Retain attribution, identify changes, and provide the applicable license.
+
+3. EXCLUSIONS AND SCOPE
+
+These offers apply only to rights the licensor can grant. They do not
+relicense third-party resources, linked websites, quotations, license
+texts or dependencies. Facts, public-domain elements and uses permitted
+by applicable legal exceptions are not made subject to new restrictions
+by this notice. Do not infer ownership of all material from its inclusion
+in the catalog.
+
+The software license and the content license apply to different material;
+they are not alternatives for the same material. This is not an OSI
+open-source licensing offer.
+
+4. PREVIOUS MIT DISTRIBUTION
+
+The repository previously distributed version 0.4.0 under the MIT License.
+That distribution is recorded at commit:
+99a3fb80b49fb666884024d868f596d73e472237
+Its license remains available in the historical record:
+https://github.com/IRMA-io/atles-eines-collectives/blob/99a3fb80b49fb666884024d868f596d73e472237/LICENSE
+
+This notice changes the terms offered in the current distribution. It does
+not purport to revoke permissions already granted for earlier copies.
+Earlier MIT-licensed material can remain available under MIT from those
+copies. Restrictions on new contributions do not remove those prior rights.
+No assertion is made that no one obtained a previous copy.
+
+5. COMMERCIAL PERMISSION
+
+This distribution does not grant general commercial permission beyond
+purposes permitted by the applicable license. For a use outside those
+permissions, obtain a separate express authorization from the rights
+holder. Contact the repository owner through GitHub.
