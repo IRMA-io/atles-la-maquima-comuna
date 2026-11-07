@@ -1,0 +1,14 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const elements=new Map();const element=s=>{if(!elements.has(s))elements.set(s,{innerHTML:'',onclick:null,focus(){},scrollIntoView(){},addEventListener(){}});return elements.get(s)};
+const context={document:{querySelector:element},console,URL,Blob};vm.createContext(context);
+const code=fs.readFileSync('public/research.js','utf8');vm.runInContext(code.split("RQ('#sourcesList').innerHTML")[0],context);
+assert.equal(vm.runInContext('lenses.length',context),6);assert.equal(vm.runInContext('criteria.length',context),7);assert.equal(vm.runInContext('supports.length',context),6);assert.equal(vm.runInContext('claims.length',context),6);
+assert(vm.runInContext('claims.every(c=>c.source&&c.interpretation&&c.alternative&&c.uncertainty)',context));
+assert(vm.runInContext('episode.instrumentId===instrument.id',context));
+vm.runInContext('renderLenses()',context);assert(element('#lensDetail').innerHTML.includes('Possible contraexemple'));
+vm.runInContext('activeLens="L02";renderLens()',context);assert(element('#lensDetail').innerHTML.includes('Sense evidència suficient'));
+vm.runInContext('renderRecords()',context);assert(element('#recordDetail').innerHTML.includes('No hi ha un desacord substantiu confirmat'));assert(element('#recordDetail').innerHTML.includes('Cadena de justificació'));
+vm.runInContext('activeRecord="instrument";renderRecord()',context);assert(element('#recordDetail').innerHTML.includes('EP-PILOT-01'));assert(element('#recordDetail').innerHTML.includes('No s’afirma codisseny'));
+vm.runInContext('renderCriteria();renderSupports()',context);assert(element('#panel-protocols').innerHTML.includes('OCAP'));assert(element('#panel-supports').innerHTML.includes('No')||element('#panel-supports').innerHTML.includes('Cap suport'));
+const html=fs.readFileSync('public/research.html','utf8');const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);for(const c of [...html.matchAll(/aria-controls="([^"]+)"/g)])assert(ids.includes(c[1]));assert(html.includes('role="tablist"'));assert(html.includes('Prototip metodològic'));
+console.log('PASS: six lenses, explicit counterevidence, two linked units, claim provenance, missing disagreement/learning preserved, support alternatives, unique panel IDs.');

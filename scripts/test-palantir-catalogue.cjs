@@ -1,0 +1,13 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const data=JSON.parse(fs.readFileSync('public/data.json','utf8'));
+const nodes={};const el=s=>nodes[s]??={innerHTML:'',textContent:'',value:'',checked:false,showModal(){},focus(){},addEventListener(){}};
+const context={document:{querySelector:el,dispatchEvent(){},activeElement:null},CustomEvent:class{},localStorage:{getItem(){return null}},URL,setTimeout,clearTimeout};vm.createContext(context);
+vm.runInContext(fs.readFileSync('public/app.js','utf8').split("document.addEventListener(")[0],context);context.rows=data;vm.runInContext('data=rows',context);
+const r=data.find(r=>r.id==='PAL01');assert(r);assert.equal(r.reviews.length,14);assert.equal(r.model.length,8);assert.equal(r.sources.length,3);
+assert.deepEqual(r.reviews.map((a,i)=>JSON.parse(vm.runInContext("JSON.stringify(CRITERIA)",context))[i].name),JSON.parse(vm.runInContext('JSON.stringify(dimensions(data[0]).map(d=>d[0]))',context)));
+el('#search').value='Palantir';assert.equal(vm.runInContext('matches()[0].id',context),'PAL01');el('#search').value='';
+vm.runInContext('detail("PAL01")',context);let html=el('#dialogContent').innerHTML;assert(html.includes('Com organitza coneixement i acció?'));assert(html.includes('/palantir.html'));assert(html.includes('P02'));assert.equal((html.match(/class="dimension"/g)||[]).length,14);assert(el('#detailSave').onclick);assert(el('#saveNotes').onclick);
+vm.runInContext('comparison=new Set(["PAL01","C08"]);compare()',context);html=el('#dialogContent').innerHTML;assert(html.includes('Palantir'));assert(html.includes('Polis'));for(const d of JSON.parse(vm.runInContext("JSON.stringify(CRITERIA)",context)))assert(html.includes(d.name));assert(html.includes('Perfil del model pendent'));
+vm.runInContext('comparison=new Set(["PAL01","D14"]);compare()',context);assert(el('#dialogContent').innerHTML.includes('Contingut no analitzat'));
+assert(fs.readFileSync('public/index.html','utf8').includes('href="#resource=PAL01"'));
+console.log('PASS: Palantir catalog search, same 14 criteria, scoped model profile, sources, notes/save controls, full comparison, restricted-material treatment and direct link.');
