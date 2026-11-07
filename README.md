@@ -64,4 +64,15 @@ L’API queda desactivada per defecte a la còpia de GitHub. `ATLES_ENABLE_SITES
 
 Prototip de recerca amb classificacions provisionals, no un protocol doctoral aprovat ni una avaluació general dels recursos. Les proves automàtiques no substitueixen la revisió visual ni les proves amb participants; la revisió visual de l’última iteració continua pendent.
 
-Es conserva la llicència MIT preexistent del repositori. Els recursos externs enllaçats mantenen les seves llicències i condicions; la llicència d’aquest codi no concedeix drets sobre els seus materials.
+**Titular indicat: sistema-io (GitHub: IRMA-io).** Política vigent des del 7 de novembre de 2026:
+
+- **Codi original:** [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0), amb avisos obligatoris d’atribució.
+- **Textos, diagrames i materials metodològics originals sobre els quals es poden concedir drets:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), amb atribució, ús no comercial i compartir igual les adaptacions distribuïdes.
+- Els recursos de tercers, fets, elements de domini públic i excepcions legals queden fora d’aquest canvi. Consulta els termes complets i l’abast a [LICENSE](LICENSE).
+- Les restriccions no comercials signifiquen que aquesta distribució no es presenta com a programari open source segons l’OSI.
+
+**Transició:** la versió ja publicada amb MIT continua documentada a l’[historial](https://github.com/IRMA-io/atles-eines-collectives/blob/99a3fb80b49fb666884024d868f596d73e472237/LICENSE). Aquesta política no retira retroactivament els permisos concedits sobre còpies anteriors. Tampoc s’afirma que ningú n’hagi obtingut còpies.
+
+**Citació suggerida:** sistema-io. (2026). *Atles · La màquina comuna*. GitHub. https://github.com/IRMA-io/atles-eines-collectives — indica també la versió o el commit utilitzat.
+
+La citació acadèmica suggerida no substitueix els avisos i requisits de cada llicència. Per a usos fora dels permisos concedits, cal una autorització expressa de la titular.
