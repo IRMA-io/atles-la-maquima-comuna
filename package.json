@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node verify.cjs && node scripts/test-palantir-catalogue.cjs && node scripts/test-reviews.cjs && node scripts/test-research.cjs && node scripts/test-analytics.mjs && node scripts/test-builds.mjs",
-    "build:worker": "node scripts/build-worker.mjs"
+    "test": "node verify.cjs && node scripts/test-palantir-catalogue.cjs && node scripts/test-reviews.cjs && node scripts/test-research.cjs && node scripts/test-analytics.mjs && node scripts/test-builds.mjs && node scripts/test-pages.mjs",
+    "build:worker": "node scripts/build-worker.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
   },
   "license": "SEE LICENSE IN LICENSE"
 }

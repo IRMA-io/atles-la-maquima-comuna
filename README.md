@@ -30,7 +30,13 @@ python3 -m http.server 8000 --directory dist
 
 Obre `http://localhost:8000`. Cal un servidor HTTP; no obris directament `index.html` com a fitxer, perquè el catàleg es carrega amb `fetch`.
 
-Les rutes actuals pressuposen allotjament a l’arrel del domini. GitHub Pages sota `/atles-eines-collectives/` requereix adaptar les rutes absolutes. Aquesta publicació del codi no activa GitHub Pages ni canvia l’accés del web que ja està allotjat a Sites.
+## GitHub Pages
+
+`npm run build:pages` genera `docs/` amb navegació relativa per al subdirectori del projecte, els 143 registres, un avís d’autoria i les condicions d’ús. No incorpora el client d’analítica ni el backend de Sites.
+
+La font de publicació és **main /docs** a **Settings → Pages → Deploy from a branch**. Cal activar-la a GitHub; la presència dels fitxers no acredita que el web ja estigui publicat. Els canvis enviats a aquesta carpeta es publiquen quan Pages està activat. Si es modifiquen els originals de `public/`, cal regenerar i enviar `docs/`.
+
+Aquesta publicació és independent del web privat de Sites. Les notes, revisions i seleccions locals de cada domini no se sincronitzen automàticament.
 
 ## Dades personals i continuïtat
 
